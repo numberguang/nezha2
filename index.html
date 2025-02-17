@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哪吒之魔童闹海</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">哪吒之魔童闹海</div>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#characters">角色</a></li>
+                <li><a href="#story">故事</a></li>
+                <li><a href="#gallery">画廊</a></li>
+                <li><a href="#token-sale" class="token-link">代币预售</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页英雄区 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>哪吒之魔童闹海</h1>
+            <p>我命由我不由天</p>
+        </div>
+        <div class="hero-image">
+            <img src="nezha.gif" alt="哪吒动态形象">
+        </div>
+    </section>
+
+    <!-- 角色展示区 -->
+    <section id="characters" class="characters">
+        <h2>主要角色</h2>
+        <div class="character-cards">
+            <div class="character-card">
+                <img src="nezha.png" alt="哪吒">
+                <div class="character-info">
+                    <h3>哪吒</h3>
+                    <p>三太子</p>
+                </div>
+            </div>
+            <div class="character-card">
+                <img src="taiyi.png" alt="太乙真人">
+                <div class="character-info">
+                    <h3>太乙真人</h3>
+                    <p>师父</p>
+                </div>
+            </div>
+            <div class="character-card">
+                <img src="aoping.png" alt="敖丙">
+                <div class="character-info">
+                    <h3>敖丙</h3>
+                    <p>龙王三太子</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 故事区域 -->
+    <section id="story" class="story">
+        <div class="story-content">
+            <div class="story-text">
+                <h2>故事简介</h2>
+                <div class="story-paragraphs">
+                    <p>《哪吒之魔童闹海》是《哪吒》系列电影第二部，是由饺子（原名杨宇）编剧并导演，吕艳婷、陈浩担任主要配音的奇幻动画电影。影片于2025年1月29日在中国大陆上映。</p>
+                    <p>讲述了天劫之后，哪吒、敖丙的灵魂保住了，但很快会魂飞魄散。太乙真人打算用七色宝莲给二人重塑肉身，但是在重塑肉身的过程中却遇到重重困难，哪吒、敖丙的命运将走向何方的故事。</p>
+                    <p>这部由导演饺子执导的续集，不仅延续了"我命由我不由天"的精神内核，更在叙事广度、技术呈现与角色深度上实现了全面升级。</p>
+                    <p>影片以哪吒与敖丙的肉身重塑为主线，将个人命运与族群存亡交织，既是一场视觉奇观，也是一次对传统文化与现代价值观的深刻对话。</p>
+                </div>
+            </div>
+            <div class="story-image">
+                <img src="nezhaaoping.gif" alt="哪吒敖丙">
+            </div>
+        </div>
+    </section>
+
+    <!-- 画廊区域 -->
+    <section id="gallery" class="gallery">
+        <h2>精彩画廊</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="nezha2.gif" alt="哪吒动态">
+            </div>
+            <div class="gallery-item">
+                <img src="nezha.png" alt="哪吒静态">
+            </div>
+            <div class="gallery-item">
+                <img src="nezhaaoping.gif" alt="哪吒敖丙">
+            </div>
+        </div>
+    </section>
+
+    <!-- 代币预售区域 -->
+    <section id="token-sale" class="token-sale">
+        <h2>NEZHA代币预售</h2>
+        <div class="token-container">
+            <div class="token-rules">
+                <h3>预售规则</h3>
+                <ul>
+                    <li><span>代币名称：</span>NEZHA</li>
+                    <li><span>预售总份数：</span>1000份</li>
+                    <li><span>每份代币数量：</span>1000万</li>
+                    <li><span>每份价格：</span>1 SOL</li>
+                    <li><span>单地址预售上限：</span>10份</li>
+                    <li>
+                        <span>预售地址：</span>
+                        <div class="copy-address">
+                            <span class="address-text">敬请期待</span>
+                            <button class="copy-btn" onclick="copyAddress()">复制</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="token-notice">
+                <h3>预售提示</h3>
+                <ol>
+                    <li>用转账Mint形式，不需要任何网页、前端</li>
+                    <li>转账即预售：用户将Sol转到预售地址，就能自动获得代币</li>
+                    <li>不用领取：参与预售的用户无需手动领取代币</li>
+                    <li>Sol即时到账：用户支付的Sol预售金额也会很快进入创建者钱包地址</li>
+                    <li>无软顶/硬顶：没有软顶或者硬顶的概念，只有一个预售总数量（份数x每份数量）</li>
+                    <li>请用户严格按照预售价格转账，多了或少了Sol无法退回</li>
+                    <li>如果转账后没有收到代币，可能是链上拥堵到账，请稍等2分钟看看</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html> 

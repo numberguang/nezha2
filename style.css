@@ -1,0 +1,618 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+}
+
+/* 导航栏样式 */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    z-index: 1000;
+    border-bottom: 1px solid #FFD700;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    color: #FFD700;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+/* 英雄区样式 */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background: linear-gradient(to bottom, #000, #1a1a1a);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #FFD700;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.hero-image img {
+    width: auto;
+    height: 70vh;
+    object-fit: contain;
+    opacity: 0.9;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.2));
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* 角色展示区样式 */
+.characters {
+    padding: 5rem 2rem;
+    background: #0a0a0a;
+}
+
+.characters h2 {
+    text-align: center;
+    color: #FFD700;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.character-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.character-card {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 1px solid #FFD700;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+}
+
+.character-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.character-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.character-info h3 {
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+}
+
+/* 故事区域样式 */
+.story {
+    padding: 5rem 2rem;
+    background: #0a0a0a;
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.story-text {
+    flex: 1;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.story-text h2 {
+    color: #FFD700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.story-paragraphs p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: justify;
+}
+
+.story-paragraphs p:last-child {
+    margin-bottom: 0;
+}
+
+.story-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+/* 画廊区域样式 */
+.gallery {
+    padding: 5rem 2rem;
+    background: #000;
+}
+
+.gallery h2 {
+    text-align: center;
+    color: #FFD700;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #FFD700;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* 导航栏代币预售链接特殊样式 */
+.token-link {
+    color: #FFD700 !important;
+    border: 1px solid #FFD700;
+    padding: 0.5rem 1rem !important;
+    border-radius: 5px;
+}
+
+.token-link:hover {
+    background: #FFD700;
+    color: #000 !important;
+}
+
+/* 代币预售区域样式 */
+.token-sale {
+    padding: 8rem 2rem;
+    background: linear-gradient(to bottom, #000, #0a0a0a);
+}
+
+.token-sale h2 {
+    text-align: center;
+    color: #FFD700;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.token-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem;
+    background: rgba(255, 215, 0, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.token-rules, .token-notice {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.token-rules h3, .token-notice h3 {
+    color: #FFD700;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.token-rules ul {
+    list-style: none;
+}
+
+.token-rules ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.token-rules ul li span {
+    color: #FFD700;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.token-notice ol {
+    padding-left: 1.5rem;
+}
+
+.token-notice ol li {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* 添加预售地址复制功能的样式 */
+.copy-address {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.address-text {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.copy-btn {
+    background: #FFD700;
+    color: #000;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.copy-btn.copied {
+    background: #4CAF50;
+    color: #fff;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .token-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+    
+    .hero-image img {
+        height: 70vh;
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+    .story-content {
+        flex-direction: column;
+    }
+    
+    .story-text, .story-image {
+        width: 100%;
+    }
+    
+    .story-image {
+        margin-top: 2rem;
+    }
+}
+
+/* 在文件末尾添加响应式布局样式 */
+@media (max-width: 768px) {
+    /* 导航栏响应式 */
+    .nav-content {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    /* 首页响应式 */
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        height: 50vh;
+    }
+
+    /* 角色展示区响应式 */
+    .characters {
+        padding: 3rem 1rem;
+    }
+
+    .characters h2 {
+        font-size: 2rem;
+    }
+
+    .character-cards {
+        gap: 1rem;
+    }
+
+    .character-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* 故事区域响应式 */
+    .story {
+        padding: 3rem 1rem;
+    }
+
+    .story-content {
+        flex-direction: column;
+    }
+
+    .story-text {
+        padding: 1.5rem;
+    }
+
+    .story-text h2 {
+        font-size: 2rem;
+    }
+
+    .story-paragraphs p {
+        font-size: 1rem;
+    }
+
+    /* 画廊响应式 */
+    .gallery {
+        padding: 3rem 1rem;
+    }
+
+    .gallery h2 {
+        font-size: 2rem;
+    }
+
+    .gallery-grid {
+        gap: 1rem;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+
+    /* 代币预售区域响应式 */
+    .token-sale {
+        padding: 4rem 1rem;
+    }
+
+    .token-sale h2 {
+        font-size: 2rem;
+    }
+
+    .token-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .token-rules, .token-notice {
+        padding: 1.5rem;
+    }
+
+    .token-rules h3, .token-notice h3 {
+        font-size: 1.5rem;
+    }
+
+    .token-rules ul li, .token-notice ol li {
+        font-size: 1rem;
+    }
+
+    /* 复制按钮响应式 */
+    .copy-address {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .address-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .copy-btn {
+        width: 100%;
+    }
+}
+
+/* 平板设备响应式 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-content {
+        max-width: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-image img {
+        height: 60vh;
+    }
+
+    .character-cards {
+        gap: 1.5rem;
+    }
+
+    .token-container {
+        padding: 1.5rem;
+    }
+}
+
+/* 导航栏在移动端的特殊处理 */
+@media (max-width: 600px) {
+    nav {
+        padding: 0.5rem 0;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .token-link {
+        padding: 0.3rem 0.8rem !important;
+    }
+}
+
+/* 确保内容不会被固定导航栏遮挡 */
+@media (max-width: 768px) {
+    section {
+        padding-top: 80px;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+} 
